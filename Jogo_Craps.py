@@ -82,14 +82,13 @@ while fichas != 0:
                 print('Você entrou na fase Point')
                 Point = True
                 while Point:
-                    nova_soma_dos_dados = soma_dos_dados
                     Dadon3 = random.randint(1,6)
                     Dadon4 = random.randint(1,6)
                     soma_dos_dados_2 = Dadon3 + Dadon4
-                    print()
-                    if soma_dos_dados_2 == nova_soma_dos_dados:
+                    print('Saiu a soma: {0}'.format(soma_dos_dados_2))
+                    if soma_dos_dados_2 == soma_dos_dados:
                         print('Você ganhou!')
-                        fichas = fichas + aposta
+                        fichas = fichas + valor_da_aposta
                         Point = False
 
                     elif soma_dos_dados_2 == 7:
@@ -104,64 +103,6 @@ while fichas != 0:
 
 
                 
-
-                
-
-                while fichas != 0:
-                    print('Você detém {0} fichas.'.format(fichas))
-                    print('Escolha uma entre as três apostas: "Twelve", "Any Craps" ou "Field"')
-                    aposta = input('Qual delas você escolherá?')
-                    if aposta == 'Any Craps':
-                        if soma_dos_dados == 2 or soma_dos_dados == 3 or soma_dos_dados == 12:
-                            print('Você ganhou sete vezes a quantidade de fichas apostada')
-                            fichas = fichas + valor_da_aposta * 7
-                        else:
-                            print('Você perdeu!')
-                            fichas =  fichas - valor_da_aposta
-
-                    elif aposta == 'Twelve':
-                        if soma_dos_dados == 12:
-                            print('Você ganhou trinta vezes a quantidade de fichas que apostou!')
-                            fichas = fichas + valor_da_aposta*30
-                        else:
-                            print('Você perdeu!')
-                            fichas = fichas - valor_da_aposta
-                            
-                    
-                    elif aposta == 'Field':
-                        if soma_dos_dados == 12:
-                            print('Você ganhou o triplo da quantidade de fichas que apostou')
-                            fichas = fichas + valor_da_aposta * 3
-                        elif soma_dos_dados == 2:
-                            print('Você ganhou o dobro da quantidade de fichas que apostou')
-                            fichas = fichas + valor_da_aposta * 2
-                        elif soma_dos_dados == 5 or soma_dos_dados == 6 or soma_dos_dados == 7 or soma_dos_dados == 11:
-                            print('Você perdeu tudo que tinha')
-                            fichas = 0 
-                        else:
-                            print('Você ganhou a mesma quantidade que apostou')
-                            fichas = fichas + valor_da_aposta
-
-                    
-                
-
-
-
-
-
-                #PAss Line BEt no point
-                #while Point != nova_soma_dos_dados:
-                    #if nova_soma_dos_dados == 7:
-                        #print('Você perdeu tudo que tinha')
-                        #fichas = 0
-                        #Point = True
-                    #elif nova_soma_dos_dados == Point:
-                        #print('Você ganhou o mesmo valor que apostou')
-                        #fichas = fichas + valor_da_aposta
-                        #Point = False
-                    #else:
-                        #Point = True 
-
     else:
         break
 
