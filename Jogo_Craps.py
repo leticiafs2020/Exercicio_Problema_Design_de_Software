@@ -105,12 +105,12 @@ while fichas != 0 and a >= 0:
                         Point = True
 
     elif seguir_no_jogo_ou_sair == 'Seguir' and a > 0:
-        #Iniciando o jogo - Fase 1
+        #Continuando o jogo após a Fase 1
         print('Começa agora a fase {0}'.format(a)) 
         print('Você pode escolher entre três opções de aposta: Any Craps, Field, Twelve.') #Declaração de opções de apostas e escolha
         aposta = input('Qual delas você escolherá?: ')
 
-       # Aposta "Any Craps" (na Fase 1)
+       # Aposta "Any Craps" (nas fases seguintes)
         if aposta == 'Any Craps':   
             Dado1 = random.randint(1,6)
             Dado2 = random.randint(1,6)
@@ -124,7 +124,7 @@ while fichas != 0 and a >= 0:
                 print('Você perdeu!')
                 fichas =  fichas - valor_da_aposta
 
-        #Aposta "Twelve" (na Fase 1)
+        #Aposta "Twelve" (nas fases seguintes)
         if aposta == 'Twelve':
             Dado1 = random.randint(1,6)
             Dado2 = random.randint(1,6)
@@ -138,7 +138,7 @@ while fichas != 0 and a >= 0:
                 print('Você perdeu!')
                 fichas = fichas - valor_da_aposta
 
-        #Aposta "Field" (na Fase 1)
+        #Aposta "Field" (nas fases seguintes)
         if aposta == 'Field':
             Dado1 = random.randint(1,6)
             Dado2 = random.randint(1,6)
