@@ -1,7 +1,7 @@
 #Design de Software - Exercício Problema 1 
 #Jogo Craps Insper
 #Criadora: Letícia Sanchez
-
+#Esse programa permite fazer mais de uma aposta por vez
 import random
 
 print("Olá")
