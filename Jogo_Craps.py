@@ -75,3 +75,59 @@ while fichas > 0:
         F = input('Deseja apostar em Field? (Digite "s" ou "sim" / "n" ou "não"): ')
         T = input('Deseja apostar em Twelve? (Digite "s" ou "sim" / "n" ou "não"): ')
         P = input('Deseja apostar em Pass Line Bet? (Digite "s" ou "sim" / "n" ou "não"): ')
+
+        #Aposta Any Craps 
+        if A == 'n' or A == 'não':
+            pass
+        else:
+            #Declaracão de quanto será apostado em Any Craps
+            valor_da_aposta1 = int(input('Quanto você deseja apostar em Any Craps? '))
+            time.sleep(1)
+            if soma_dos_dados == 2 or soma_dos_dados == 3 or soma_dos_dados == 12:  
+                fichas = fichas + valor_da_aposta1 * 7
+                print("Você ganhou sete vezes o que apostou, {0} fichas!".format(valor_da_aposta1 * 7))
+                print ('Você detém {0} fichas'.format(fichas))
+            else:
+                fichas = fichas - valor_da_aposta1
+                print("Você perdeu o que apostou!")
+                print ('Você detém {0} fichas'.format(fichas))
+
+        #Aposta Field
+        if F == 'n' or F == 'não' :
+            pass
+        else:
+            #Declaracão de quanto será apostado em Field
+            valor_da_aposta2 = int(input('Quanto você deseja apostar em Field? '))
+            time.sleep(1)
+            if soma_dos_dados == 5 or soma_dos_dados == 6 or soma_dos_dados == 7 or soma_dos_dados == 8 :
+                fichas = fichas - valor_da_aposta2
+                print("Você perdeu o que apostou!")
+                print ('Você detém {0} fichas'.format(fichas))
+            elif soma_dos_dados == 3 or soma_dos_dados == 4 or soma_dos_dados == 9 or soma_dos_dados == 10 or soma_dos_dados == 11:
+                fichas = fichas + valor_da_aposta2
+                print("Você ganhou o que apostou!")
+                print ('Você detém {0} fichas'.format(fichas))
+            elif soma_dos_dados == 2:
+                fichas = fichas + 2 * valor_da_aposta2
+                print("Você ganhou o dobro do que apostou, {0} fichas!". format(valor_da_aposta2 * 2))
+                print ('Você detém {0} fichas'.format(fichas))
+            else:
+                fichas = fichas + 3 * valor_da_aposta2
+                print("Você ganhou o triplo do que apostou, {0} fichas!".format(valor_da_aposta2 * 3))
+                print ('Você detém {0} fichas'.format(fichas))
+
+        #Aposta Twelve
+        if T == 'n' or T == 'não':
+            pass
+        else:
+            #Declaracão de quanto será apostado em Twelve
+            valor_da_aposta3 = int(input('Quanto você deseja apostar em Twelve? '))
+            time.sleep(1)
+            if soma_dos_dados == 12:
+                fichas = fichas + valor_da_aposta3 * 30
+                print("Você ganhou trinta vezes o que apostou, {0} fichas!". format(valor_da_aposta3 * 30))
+                print ('Você detém {0} fichas'.format(fichas))
+            else:
+                fichas = fichas - valor_da_aposta3
+                print("Você perdeu o que apostou!")
+                print ('Você detém {0} fichas'.format(fichas))
