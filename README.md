@@ -13,4 +13,5 @@ Nesse repositório se eu tiver conseguido arrumar, terão 3 arquivos:
 
  - Mensagem ao Professor:
  
- Estou tentando refazer
+ Professor, depois da nossa conversa de ontem, decidi refazer todo o jogo vendo inúmeras referências de como funcionava online, pensando em alternativas mais simples de se resumir o programa, entrei em alguns sites de tutorial de Python para entender melhor as coisas. E acho que consegui fazer o melhor que eu pude kkkkk. Enfim, ainda tenho que melhorar muito, como disse programação vem sendo uma grande dificuldade para mim, enfim espero que goste e dê certo.
+ Ah, o time.sleep() eu descobri porque o Wil comentou comigo e fui ler mais sobre e aprender pesquisando na internet. 

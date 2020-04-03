@@ -220,7 +220,7 @@ while fichas > 0:
                      #Soma dos Dados       
                     print('Saiu na primeira soma: {0}'.format(soma_dos_dados))
                     print("Saiu na segunda soma: {0}".format(soma_dos_dados2))
-                    time.sleep(1)
+                    time.sleep(2)
                     #Condições da Point 
                     if soma_dos_dados2 == 7:
                         fichas = fichas - valor_da_aposta4
@@ -234,6 +234,13 @@ while fichas > 0:
                         break
                     else:
                         print("Reiniciando fase 'Point'.")
+                        time.sleep(1)
                     if fichas <= 0:
                         break
         print('Saiu a soma: {0}'.format(soma_dos_dados))
+    
+    else:
+        break
+
+print("Jogo encerrado")
+print("Você encerrou o jogo com {0} fichas.".format(fichas))
