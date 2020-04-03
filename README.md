@@ -13,4 +13,4 @@ Nesse repositório se eu tiver conseguido arrumar, terão 3 arquivos:
 
  - Mensagem ao Professor:
  
- Professor, primeiramente queria dizer que fiz as alterações que me falou, depois disso tudo esta funcionando normalmente quando testei. Segundo, queria pedir desculpas pelo tamanho do programa, tentei de outras maneiras mas estou com muita dificuldade ainda, tenho feito exercícios mas como eu te disse uma vez, meu problema não é a teoria mas a elaboração, programação está sendo bem difícil para mim. Enfim, novamente desculpas, prometo melhorar :(
+ Estou tentando refazer
