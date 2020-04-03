@@ -131,3 +131,92 @@ while fichas > 0:
                 fichas = fichas - valor_da_aposta3
                 print("Você perdeu o que apostou!")
                 print ('Você detém {0} fichas'.format(fichas))
+
+        #Aposta Pass Line Bet
+        if P == 'n' or P == 'nao':
+            pass
+        else:
+            valor_da_aposta4 = int(input('Quanto você deseja apostar em Pass Line Bet? '))
+            time.sleep(1)
+            if soma_dos_dados == 7 or soma_dos_dados == 11:
+                fichas = fichas + valor_da_aposta4 * 2
+                print("Você ganhou o dobro do que apostou, fichas {0}!".format(valor_da_aposta4 * 2))
+                print ('Você detém {0} fichas'.format(fichas))
+            elif soma_dos_dados == 2 or soma_dos_dados == 3 or soma_dos_dados == 12:
+                fichas = fichas - valor_da_aposta4
+                print("Você perdeu o que apostou!")
+                print ('Você detém {0} fichas'.format(fichas))
+            else:
+                #Entrando na fase Point pois a soma dos dados foi 4,5,6,8,9 ou 10 
+                Point = True
+                print('Você entrou na fase Point!')
+                while Point:
+                    time.sleep(1)
+                    print ('Você detém {0} fichas'.format(fichas))
+                    Dado3 = random.randint(1,6)
+                    Dado4 = random.randint(1,6)
+                    soma_dos_dados2 = Dado3 + Dado4
+                    time.sleep(1)
+                    A_p = input('Você quer apostar em Any Craps? (Digite "s" ou "sim" / "n" ou "não"): ') 
+                    F_p= input('Você quer apostar em Field? (Digite "s" ou "sim" / "n" ou "não"): ')
+                    T_p = input('Você quer apostar em Twelve? (Digite "s" ou "sim" / "n" ou "não"): ')
+
+                    #Aposta Any Craps em Point
+                    if A_p == 'n':
+                        pass
+                    else:
+                        #Declaração de quanto quer apostar em Any Craps na Point
+                        valor_da_aposta_p1 = int(input('Quantas fichas você quer apostar em Any Craps? '))
+                        time.sleep(1)
+                        if soma_dos_dados2 == 2 or soma_dos_dados2 == 3 or soma_dos_dados2 == 12:
+                            fichas = fichas + valor_da_aposta_p1 * 7
+                            print("Você ganhou sete vezes o que apostou, {0} fichas!".format(valor_da_aposta_p1 * 7))
+                            print ('Você detém {0} fichas'.format(fichas))
+                        else:
+                            fichas = fichas - valor_da_aposta_p1
+                            print("Você perdeu o que apostou!")
+                            print ('Você detém {0} fichas'.format(fichas))
+
+                    #Aposta Field em Point  
+                    if F_p == 'n':
+                        pass
+                    else:
+                        #Declaração de quanto apostar em Field na Point
+                        valor_da_aposta_p2 = int(input('Quantas fichas você quer apostar em Field? '))
+                        time.sleep(1)
+                        if soma_dos_dados2 == 5 or soma_dos_dados2 == 6 or soma_dos_dados2 == 7 or soma_dos_dados2 == 8:
+                            fichas = fichas - valor_da_aposta_p2
+                            print("Você perdeu o que apostou!")
+                            print ('Você detém {0} fichas'.format(fichas))
+                        elif soma_dos_dados2 == 3 or soma_dos_dados2 == 4 or soma_dos_dados2 == 9 or soma_dos_dados2 == 10 or soma_dos_dados2 == 11:
+                            fichas = fichas + valor_da_aposta_p2
+                            print("Você ganhou o que apostou!")
+                            print ('Você detém {0} fichas'.format(fichas))
+                        elif soma_dos_dados2 == 2:
+                            fichas = fichas + 2 * valor_da_aposta_p2
+                            print("Você ganhou o dobro do que apostou, {0} fichas!".format(valor_da_aposta_p2 * 2))
+                            print ('Você detém {0} fichas'.format(fichas))
+                        else:
+                            fichas = fichas + 3 * valor_da_aposta_p2
+                            print("Você ganhou o triplo do que apostou, {0} fichas!".format(valor_da_aposta_p2 * 3))
+                            print ('Você detém {0} fichas'.format(fichas))
+                            
+                    #Aposta Twelve em Point
+                    if T_p == 'n':
+                        pass
+                    else:
+                        #Declaração de quanto apostar em Twelve na Point
+                        valor_da_aposta_p3 = int(input('Quantas fichas você quer apostar em Twelve? '))
+                        time.sleep(1)
+                        if soma_dos_dados2 == 12:
+                            fichas = fichas + valor_da_aposta_p3 * 30
+                            print("Você ganhou trinta vezes o que apostou, {0} fichas!".format(valor_da_aposta_p3 * 30))
+                            print ('Você detém {0} fichas'.format(fichas))
+                        else:
+                            fichas = fichas - valor_da_aposta_p3
+                            print("Você perdeu o que apostou!")
+                            print ('Você detém {0} fichas'.format(fichas))
+
+                     #Soma dos Dados       
+                    print('Saiu na primeira soma: {0}'.format(soma_dos_dados))
+                    print("Saiu na segunda soma: {0}".format(soma_dos_dados2))
