@@ -220,3 +220,20 @@ while fichas > 0:
                      #Soma dos Dados       
                     print('Saiu na primeira soma: {0}'.format(soma_dos_dados))
                     print("Saiu na segunda soma: {0}".format(soma_dos_dados2))
+                    time.sleep(1)
+                    #Condições da Point 
+                    if soma_dos_dados2 == 7:
+                        fichas = fichas - valor_da_aposta4
+                        print('Você perdeu {0} fichas!'.format(valor_da_aposta4))
+                        print ('Você detém {0} fichas'.format(fichas))
+                        break
+                    elif soma_dos_dados2 == soma_dos_dados:
+                        fichas = fichas + valor_da_aposta4
+                        print('Você ganhou {0} fichas!'.format(valor_da_aposta4))
+                        print ('Você detém {0} fichas'.format(fichas))
+                        break
+                    else:
+                        print("Reiniciando fase 'Point'.")
+                    if fichas <= 0:
+                        break
+        print('Saiu a soma: {0}'.format(soma_dos_dados))
